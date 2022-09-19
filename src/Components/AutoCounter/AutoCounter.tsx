@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import s from "./App.module.css";
+import s from "../../App.module.css";
 import Counter from "./Counter";
 
 
 
+
  function AutoCounter() {
-    const [count, setCounter] = useState(0)
+    const [counter, setCounter] = useState(0)
 
     const increment = () => {
         let i = 0;
@@ -19,13 +20,13 @@ import Counter from "./Counter";
             }
         }, 1000);
     }
-    const  colorCountFinish  = count === 5 ? s.red : s.black;
+    const  colorCountFinish  = counter === 5 ? s.red : s.black;
 
     const reset = () => setCounter(0)
 
     return (
         <Counter
-            count={count}
+            counter={counter}
             increment={increment}
             reset={reset}
             colorCountFinish={colorCountFinish}

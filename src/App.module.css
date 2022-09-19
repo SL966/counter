@@ -1,0 +1,102 @@
+
+.style_container {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    width: 250px;
+    height: 200px;
+    grid-template-areas:
+   'h h'
+   'h c';
+
+    background: cornflowerblue; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+
+    /*margin-left: auto;
+    margin-right: auto;*/
+    margin-top: 50px;
+
+}
+
+.text  {
+    text-align: center;
+    margin-top: 20px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background: lemonchiffon;
+}
+.count {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 200%;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+
+}
+.increment {
+   background: green;
+    border: 3px solid #fff;
+    border-radius: 5px;
+
+}
+
+.reset {
+    background: red;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.mstyle_container {
+    width: 250px;
+    height: 200px; /* Размеры */
+
+    background: cornflowerblue; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px
+}
+
+
+.mtext {
+    text-align: center;
+    margin-top: 20px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background: lemonchiffon;
+    font-size: 100%;
+}
+
+.mcount {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 200%;
+}
+
+
+.mbutton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mincrement {
+    background: green;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.mreset {
+    background: red;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+}

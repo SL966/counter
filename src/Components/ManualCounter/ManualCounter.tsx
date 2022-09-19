@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import VisualMonualCounter from "./VisualMonualCounter";
-import s from "./App.module.css";
+import VisualManualCounter from "./VisualManualCounter";
+import s from "../../App.module.css";
 
-const ManualCounter = () => {
+export const ManualCounter = () => {
 
     const [count, setCounter] = useState(0)
 
@@ -21,11 +21,10 @@ const ManualCounter = () => {
 
     return (
         <div>
-            <VisualMonualCounter
+            <VisualManualCounter
                 count={count}
                 handCount1={handCount1}
                 reset={reset}
-
             />
         </div>
     );

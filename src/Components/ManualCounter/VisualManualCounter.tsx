@@ -9,7 +9,7 @@ type ManualCounter = {
 }
 
 
-export const VisualMonualCounter = (props: ManualCounter) => {
+export const VisualManualCounter = (props: ManualCounter) => {
 
     let colorCountFinish = {
         color: props.count === 5 ? 'red' : 'black',
@@ -34,4 +34,4 @@ export const VisualMonualCounter = (props: ManualCounter) => {
     );
 };
 
-export default VisualMonualCounter;
+export default VisualManualCounter;
