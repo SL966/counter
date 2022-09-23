@@ -10,7 +10,7 @@ type counterType = {
 }
 
 
-const Counter = (props: counterType) => {
+export const VisualAutoCounter = (props: counterType) => {
 
     let colorCountFinish = {
         color: props.counter === 5 ? 'red' : 'black',
@@ -39,5 +39,3 @@ const Counter = (props: counterType) => {
     );
 
 };
-
-export default Counter;

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import VisualManualCounter from "./VisualManualCounter";
-import s from "../../App.module.css";
+
 
 export const ManualCounter = () => {
 
     const [count, setCounter] = useState(0)
 
      const handCount1 = () => {
-        // Counter state is incremented
+        // VisualAutoCounter state is incremented
         setCounter(count + 1)
         if (count === 5) {
             setCounter(5)
@@ -15,7 +15,7 @@ export const ManualCounter = () => {
 
     }
     const reset = () => {
-        // Counter state is decremented
+        // VisualAutoCounter state is decremented
         setCounter(0)
     }
 

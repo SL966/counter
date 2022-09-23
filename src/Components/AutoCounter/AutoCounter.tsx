@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import s from "../../App.module.css";
-import Counter from "./Counter";
+import {VisualAutoCounter} from "./VisualAutoCounter";
+
 
 
 
@@ -25,7 +26,7 @@ import Counter from "./Counter";
     const reset = () => setCounter(0)
 
     return (
-        <Counter
+        <VisualAutoCounter
             counter={counter}
             increment={increment}
             reset={reset}
