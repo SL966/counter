@@ -1,0 +1,160 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 30px;
+
+}
+
+.container_value {
+    margin: 0 auto;
+    place-items: center; /*выравнивание в контейнере*/
+    width: 400px; /* ширина контейнера*/
+    height: 250px; /*высота контейнера*/
+
+
+    background: cornflowerblue; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+
+    /*margin-left: auto;
+    margin-right: auto;*/
+    margin-top: 50px; /*отступ сверху*/
+}
+
+.button_value {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container_input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+}
+
+.box1_max_value {
+    text-align: center;
+}
+
+.box2_input {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px; /* Радиус скругления */
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); /* тень */
+}
+
+.box3_start_value {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.box4_input {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px; /* Радиус скругления */
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); /* тень */
+}
+
+.button_position {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button_value {
+    width: 70px;
+    text-align: center;
+    background: green;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+
+.style_container {
+    /*margin: 0 auto;*/
+    place-items: center;
+    width: 400px;
+    height: 250px;
+    background: cornflowerblue; /*Цвет фона*/
+    outline: 2px solid #000; /*Чёрная рамка*/
+    border: 3px solid #fff; /*Белая рамка*/
+    border-radius: 10px; /*Радиус скругления*/
+    margin-top: 50px;
+}
+
+.text {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background: lemonchiffon;
+    justify-content: center;
+    align-items: center;
+}
+
+.count {
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 60px;
+
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    justify-content: center;
+
+}
+
+.increment {
+    color: black;
+    background: green;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
+.reset {
+    background: red;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.rotate_double {
+    width: 7%;
+    height: 7%;
+    animation: rotation infinite 3s linear;
+    margin-right: 10px;
+    margin-left: 2px;
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(-0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+

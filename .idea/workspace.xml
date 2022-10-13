@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07648171-6b7f-4273-91a8-f45c7807c928" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="07648171-6b7f-4273-91a8-f45c7807c928" name="Changes" comment="renamed component">
+      <change afterPath="$PROJECT_DIR$/src/Components/AutoCounter/AutoCounter.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/AutoCounter/Counter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ManualCounter/ManualCounter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/AutoCounter/AutoCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AutoCounter/AutoCounter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AutoCounter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AutoCounter/VisualAutoCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AutoCounter/VisualAutoCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AutoCounter/VisualAutoCounter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ManualCounter/ManualCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ManualCounter/ManualCounter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ManualCounter/VisualManualCounter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ManualCounter/VisualManualCounter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +51,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="X:\counter-exam\my-app\src\Components\AutoCounter" />
+      <recent name="X:\counter-exam\my-app\src\Components\Animation" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +71,22 @@
       <workItem from="1663681599196" duration="3000" />
       <workItem from="1663681677779" duration="41000" />
       <workItem from="1663947241610" duration="351000" />
+      <workItem from="1663947610936" duration="52514000" />
+      <workItem from="1664797718391" duration="4948000" />
+      <workItem from="1664918540819" duration="13796000" />
+      <workItem from="1664989842348" duration="25364000" />
+      <workItem from="1665085401224" duration="57521000" />
+      <workItem from="1665413230236" duration="3697000" />
+      <workItem from="1665670855454" duration="2467000" />
     </task>
+    <task id="LOCAL-00001" summary="renamed component">
+      <created>1663947797535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663947797535</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,5 +102,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rename component" />
+    <MESSAGE value="renamed component" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed component" />
   </component>
 </project>
