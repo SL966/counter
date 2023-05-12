@@ -1,13 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {VisualManualCounter} from "./VisualManualCounter";
 import s from "./ManualCounter.module.css";
 
 
 export const ManualCounter = () => {
 
-    const [count, setCounter] = useState<any | number>('enter value end press `set`');
-    const [start, setStart] = useState<number>(0);
-    const [valueMax, setValueMax] = useState<number>(0);
+    const [count, setCounter] = useState<any | number>(localStorage.getItem("count") || 'enter value end press `set`'
+    );
+    const [start, setStart] = useState(Number(localStorage.getItem("start")) || 0);
+    const [valueMax, setValueMax] = useState(Number(localStorage.getItem("valueMax")) || 0);
+
+    useEffect(() => {
+        localStorage.setItem("count", count);
+        localStorage.setItem("start", start.toString());
+        localStorage.setItem("valueMax", valueMax.toString());
+
+    }, [count, start, valueMax]);
 
     const setValueStart = () => {
         setCounter(start)
@@ -68,6 +76,7 @@ export const ManualCounter = () => {
     let colorCountFinish = `${s.m_count} 
     ${count === valueMax ? s.red : s.black} 
     ${count === valueMax ? s.fontSize_300 : s.fontSize_200}`
+
 
     let errorValueInputColor = {
         background: errorValueInput

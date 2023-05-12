@@ -7,8 +7,8 @@ type ManualCounterProps = {
     reset: () => void
     startNumberCount: (target: any) => void
     maxValueCounter: (target: any) => void
-    start: number
-    valueMax: number
+    start: string | number
+    valueMax: string | number
     countPlus: () => void
     errorValue: () => void
     colorCountFinish: string

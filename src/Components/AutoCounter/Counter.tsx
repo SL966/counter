@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Count.module.css'
+import s from './AutoCounter.module.css'
 
 
 export const Time = () => {

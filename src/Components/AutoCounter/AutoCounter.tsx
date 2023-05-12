@@ -1,11 +1,21 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {VisualAutoCounter} from "./VisualAutoCounter";
 
 
 export function AutoCounter() {
-    const [counter, setCounter] = useState<any | number>('enter value end press `set`');
-    const [val, setVal] = useState(0);
-    const [valStart, setValStart] = useState(0);
+
+    const valStartGetItem = Number(localStorage.getItem("valStart")) || 0;
+
+    const [counter, setCounter] = useState<any | number>(localStorage.getItem("counter") || 'enter value end press `set`');
+    const [val, setVal] = useState(localStorage.getItem("val") || 0);
+    const [valStart, setValStart] = useState(valStartGetItem);
+
+    useEffect(() => {
+        localStorage.setItem("counter", counter);
+        localStorage.setItem("val", val.toString());
+        localStorage.setItem("valStart", valStart.toString());
+
+    }, [counter, val, valStart]);
 
     const setValueStart = () => {
         setCounter(valStart)
@@ -71,7 +81,6 @@ export function AutoCounter() {
         color: counter === val ? 'red' : 'black',
         fontSize: counter === val ? '300%' : '200%',
     };
-
 
     return (
         <VisualAutoCounter

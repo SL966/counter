@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './AutoCounter.module.css'
 
 
@@ -8,15 +8,15 @@ type VisualAutoCounterProps = {
     reset: () => void
     /*colorCountFinish: string*/
     set_number: (target: any) => void
-    val: number
+    val: number | string
     setNumberStart: (target: any) => void
-    valStart: number
+    valStart: number | string
     setValueStart: () => void
     isButtonSetDisabled: boolean
     isButtonIncrementDisabled: boolean
     isButtonResetDisabled: boolean
     errorValue: () => void
-    colorCountFinish:object
+    colorCountFinish: object
 }
 
 export const VisualAutoCounter: React.FC<VisualAutoCounterProps> =
@@ -88,3 +88,24 @@ export const VisualAutoCounter: React.FC<VisualAutoCounterProps> =
         );
 
     };
+
+// useEffect(() => {
+//     // Load the value of the counter from local storage
+//     if (localStorage.getItem("counter")) {
+//         setCounter(localStorage.getItem("counter"))
+//         if (val !== null) {
+//             setVal(Number(localStorage.getItem("val")))
+//         }
+//         if (valStart !== null) {
+//             setValStart(Number(localStorage.getItem("valStart")))
+//         }
+//     }
+// }, []);
+//
+// useEffect(() => {
+//     // Save the values of the counters to local storage
+//     localStorage.setItem("counter", counter);
+//     localStorage.setItem("val", val.toString());
+//     localStorage.setItem("valStart", valStart.toString());
+// }, [counter, val, valStart]);
+
