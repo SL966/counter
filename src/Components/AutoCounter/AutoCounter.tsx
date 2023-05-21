@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {VisualAutoCounter} from "./VisualAutoCounter";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../State/Store";
+import {InitialStateType, setCounter, setVal, setValStart} from "../State/AutoCounter-reducer";
 
 
-export function AutoCounter() {
 
-    const valStartGetItem = Number(localStorage.getItem("valStart")) || 0;
+export const AutoCounter:React.FC = () => {
 
-    const [counter, setCounter] = useState<any | number>(localStorage.getItem("counter") || 'enter value end press `set`');
-    const [val, setVal] = useState(localStorage.getItem("val") || 0);
-    const [valStart, setValStart] = useState(valStartGetItem);
+    const dispatch = useDispatch();
+    const {counter, val, valStart} = useSelector<AppRootStateType,
+        InitialStateType>(state => state.autoCounter);
 
     useEffect(() => {
         localStorage.setItem("counter", counter);
@@ -18,7 +20,7 @@ export function AutoCounter() {
     }, [counter, val, valStart]);
 
     const setValueStart = () => {
-        setCounter(valStart)
+        dispatch(setCounter(valStart))
     }
 
     const increment = () => {
@@ -29,18 +31,18 @@ export function AutoCounter() {
             if (i > val) {
                 clearInterval(id);
             } else {
-                setCounter(i);
+                dispatch(setCounter(i));
             }
         }, 1000);
     }
 
-    const reset = () => setCounter('enter value end press `set`');
+    const reset = () => dispatch(setCounter('enter value end press `set`'));
 
     const errorValue = () => {
         if (val <= valStart || val <= 0 || valStart < 0) {
-            setCounter('incorrect value !')
+            dispatch(setCounter('incorrect value !'))
         } else {
-            setCounter('enter value end press `set`')
+            dispatch(setCounter('enter value end press `set`'))
         }
     }
 
@@ -49,14 +51,14 @@ export function AutoCounter() {
         let {value, min, max} = target;
         value = Math.max(Number(min), Math.min(Number(max), Number(value)));
 
-        setVal(value);
+        dispatch(setVal(value));
     };
 
     const setNumberStart = ({target}: any) => {
         let {value, min, max} = target;
         value = Math.max(Number(min), Math.min(Number(max), Number(value)));
 
-        setValStart(value);
+        dispatch(setValStart(value));
     };
 
     let isButtonSetDisabled =

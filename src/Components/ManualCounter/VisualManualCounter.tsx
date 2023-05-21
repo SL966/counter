@@ -2,7 +2,7 @@ import React from 'react';
 import s from "./ManualCounter.module.css";
 
 type ManualCounterProps = {
-    count: string | number
+    count: any | number
     setValueStart: () => void
     reset: () => void
     startNumberCount: (target: any) => void

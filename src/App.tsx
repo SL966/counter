@@ -1,9 +1,7 @@
 import React from 'react';
-
 import {AutoCounter} from "./Components/AutoCounter/AutoCounter";
 import {ManualCounter} from "./Components/ManualCounter/ManualCounter";
 import {Time} from "./Components/AutoCounter/Counter";
-
 
 
 export function App() {
@@ -12,7 +10,7 @@ export function App() {
     return (
         <div>
             <ManualCounterMemo/>
-            <ManualCounter/>
+            <ManualCounter />
             <Time/>
         </div>
     )

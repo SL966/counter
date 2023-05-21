@@ -1,72 +1,75 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {VisualManualCounter} from "./VisualManualCounter";
 import s from "./ManualCounter.module.css";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "../State/Store";
+import {InitialStateType, setCount, setStart, setValueMax} from "../State/ManualCounter-reducer";
 
 
-export const ManualCounter = () => {
 
-    const [count, setCounter] = useState<any | number>(localStorage.getItem("count") || 'enter value end press `set`'
-    );
-    const [start, setStart] = useState(Number(localStorage.getItem("start")) || 0);
-    const [valueMax, setValueMax] = useState(Number(localStorage.getItem("valueMax")) || 0);
+
+    export const ManualCounter: React.FC = () => {
+        const dispatch = useDispatch();
+        const {count, start, valueMax} = useSelector<AppRootStateType,
+            InitialStateType>(state => state.manualCounter);
 
     useEffect(() => {
-        localStorage.setItem("count", count);
+        localStorage.setItem("count", count.toString());
         localStorage.setItem("start", start.toString());
         localStorage.setItem("valueMax", valueMax.toString());
 
     }, [count, start, valueMax]);
 
     const setValueStart = () => {
-        setCounter(start)
+        dispatch(setCount(start))
     }
 
     const errorValue = () => {
         if (valueMax <= start || valueMax <= 0 || start < 0) {
-            setCounter('incorrect value !')
+            dispatch(setCount('incorrect value !'))
         } else {
-            setCounter('enter value end press `set`')
+            dispatch(setCount('enter value end press `set`'))
         }
     }
 
     const countPlus = () => {
-        setCounter(count + 1);
-        if (count === valueMax) {
-            setCounter(valueMax)
+        dispatch(setCount(Number(count) + 1));
+        if (Number(count) === valueMax) {
+            dispatch(setCount(valueMax))
         }
     }
 
     const reset = () => {
-        setCounter('enter value end press `set`')
+        dispatch(setCount('enter value end press `set`'))
     }
 
 
     const startNumberCount = ({target}: any) => {
         let {value, min, max} = target;
         value = Math.max(Number(min), Math.min(Number(max), Number(value)));
-        setStart(value);
+        dispatch(setStart(value));
     };
 
     const maxValueCounter = ({target}: any) => {
         let {value, min, max} = target;
         value = Math.max(Number(min), Math.min(Number(max), Number(value)));
-        setValueMax(value);
+        dispatch(setValueMax(value));
     };
 
     let isButtonSetDisabled =
         start >= valueMax
-        || count === valueMax
-        || count > start
+        || Number(count) === valueMax
+        || Number(count) > start
         || start < 0
 
     let isButtonIncrementDisabled =
         start >= valueMax
         || count === 'enter value end press `set`'
         || count === 'incorrect value !'
-        || count === valueMax
+        || Number(count) === valueMax
 
     let isButtonResetDisabled =
-        count < valueMax
+        Number(count) < valueMax
         || count === 'incorrect value !'
         || count === 'enter value end press `set`'
 
@@ -74,8 +77,8 @@ export const ManualCounter = () => {
         count === 'incorrect value !'
 
     let colorCountFinish = `${s.m_count} 
-    ${count === valueMax ? s.red : s.black} 
-    ${count === valueMax ? s.fontSize_300 : s.fontSize_200}`
+    ${Number(count) === valueMax ? s.red : s.black} 
+    ${Number(count) === valueMax ? s.fontSize_300 : s.fontSize_200}`
 
 
     let errorValueInputColor = {
