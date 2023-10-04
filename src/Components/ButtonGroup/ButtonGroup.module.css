@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 11em;
+  }
+
+
+  
+  .button_white {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #56382d;
+    border-radius: 10px;
+      }
+  
+  .button_white:hover {
+    background-color: white;
+  }
+  
+  .button_white:active {
+    background-color: #999999;
+  }
+  
+  .button_light_blue:hover {
+    background-color: lightblue;
+  }
+  
+  .button_light_blue:active {
+    background-color: #999999;
+  }
+  
+  .button_light_blue {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #56382d;
+    border-radius: 10px;
+  }
+  
+  .button_light_green:hover {
+    background-color: lightgreen;
+  }
+  
+  .button_light_green:active {
+    background-color: #999999;
+  }
+  
+  .button_light_green {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #56382d;
+    border-radius: 10px;
+  }
+  
+  .button_light_pimk:hover {
+    background-color: lightpink;
+  }
+  
+  .button_light_pimk:active {
+    background-color: #999999;
+  }
+  
+  .button_light_pimk {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f9f9f9;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #56382d;
+    border-radius: 10px;
+  }
+  
+  
+  

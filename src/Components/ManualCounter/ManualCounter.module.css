@@ -2,8 +2,9 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 30px;
-
+    justify-items: center;
 }
+
 
 .container_value {
     margin: 0 auto;
